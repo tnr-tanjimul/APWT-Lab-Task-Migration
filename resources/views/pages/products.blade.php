@@ -1,4 +1,10 @@
 @extends('layouts.app')
+@section('title', 'Products')
+@section('plugin-css')
+
+@endsection
+@section('plugin-js')
+@endsection
 
 @section('content')
 
@@ -15,10 +21,10 @@
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">UBold</a></li>
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Extras</a></li>
-                                            <li class="breadcrumb-item active">{{ $page_name }}</li>
+                                            <li class="breadcrumb-item active"> @yield('title')</li>
                                         </ol>
                                     </div>
-                                    <h4 class="page-title">{{ $page_name }}</h4>
+                                    <h4 class="page-title"> @yield('title')</h4>
                                 </div>
                             </div>
                         </div>     
