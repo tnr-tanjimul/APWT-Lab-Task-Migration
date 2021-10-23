@@ -12,7 +12,7 @@
 		<meta name="csrf-token" content="{{ csrf_token() }}">
 
         <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}" />
 
 		<!-- Styles -->
 		@include('inc.styles')
