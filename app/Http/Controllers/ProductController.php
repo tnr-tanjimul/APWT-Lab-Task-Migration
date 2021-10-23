@@ -36,7 +36,7 @@ class ProductController extends Controller
         $validator = Validator::make([], []);
 
         $request->validate([
-            'name' => 'required|min:5|max:100',
+            'name' => 'required|min:2|max:100',
             'code' => 'required|min:3|max:6',
             'description' => 'required|min:3|max:10',
             'price' => 'required|min:1|max:10000',
@@ -56,31 +56,22 @@ class ProductController extends Controller
         // $p->p_name = $request->name;
         // $p->p_name = $request->name;
         // $p->p_name = $request->name;
-        $p->save();
-        
+       //$p->save();
 
-
-        
-
-       
-
-        
-    
-       
-       
-
-        
-
-        $validator->getMessageBag()->add('message', 'That password is incorrect.');
-        return redirect($request -> url())
-                    -> withErrors($validator)
-                    -> withInput();
+        if($p->save()) {
+            return redirect()->route('product.add')->withSuccess(['Product Successfully added']);
+        }
     }
 
     public function delete(Request $request)
     {
+        //return $request->id;
+
+        
         $var = Product::where('id', $request->id)->first();
         $var->delete();
-        return redirect()->route('pages.products');
+        return redirect()->route('product.list');
+
+    
     }
 }

@@ -49,9 +49,11 @@
                     </div>
 
                     <div class="form-group">
-                        @error('message')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
+                        @if(session()->has('message'))
+                        <div class="alert alert-success">
+                            {{ session()->get('message') }}
+                        </div>
+                        @endif
 
 
                         @if($errors->any())
@@ -106,7 +108,7 @@
 
                                     <td>
                                         <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                        <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                        <a href="/delete/{{$product->id}}" class="action-icon"> <i class="mdi mdi-delete"></i></a>
                                     </td>
                                 </tr>
                                 @endforeach
