@@ -139,4 +139,97 @@
 </div>
 
 
+
+<div class="modal fade" id="custom-modal" tabindex="-1" role="dialog" style="display: none;" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-light">
+                        <h4 class="modal-title" id="myCenterModalLabel">@yield('title')</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <form action="app/Controller/ServerWatchDogController.php" method="post">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" required="">
+                            </div>
+                            <div class="form-group">
+                                <label for="code">Code</label>
+                                <input type="number" class="form-control" id="code" name="code" placeholder="Enter Code" required="">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="description">Description</label>
+                                <input type="text" class="form-control" id="description" name="description" placeholder="Enter description" required="">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="description">Description</label>
+                                <input type="text" class="form-control" id="description" name="description" placeholder="Enter description" required="">
+                            </div>
+
+
+
+                            <div class="form-group">
+                                <label for="category">Category</label>
+                                <input type="text" class="form-control" id="category" name="category" placeholder="Enter description" required="">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="price">Price</label>
+                                <input type="number" class="form-control" id="price" name="price" placeholder="Enter price" required="">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="quantity">Quantity</label>
+                                <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Enter quantity" required="">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="stock_date">Stock Date</label>
+                                <input type="date" class="form-control" id="stock_date" name="stock_date" placeholder="Enter stock_date" required="">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="rating">Rating</label>
+                                <input type="number" class="form-control" id="rating" name="rating" placeholder="Enter rating" required="">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="purchased">Purchased</label>
+                                <input type="text" class="form-control" id="purchased" name="purchased" placeholder="Enter purchased" required="">
+                            </div>
+
+                            
+
+
+
+
+
+
+
+
+
+
+
+                            
+                            @csrf
+                            <div class="text-right">
+                                <button type="submit" class="btn btn-success waves-effect waves-light">Save</button>
+                                <button type="button" class="btn btn-danger waves-effect waves-light" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+
+
 @endsection
