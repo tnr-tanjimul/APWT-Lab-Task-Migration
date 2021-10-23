@@ -48,6 +48,12 @@
                         <div class="col-sm-12"></div>
                     </div>
 
+                    <div class="form-group">                      
+                        @error('message')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+
                     <div class="table-responsive">
                         <table class="table table-centered table-nowrap table-striped" id="products-datatable">
                             <thead>
