@@ -24,6 +24,8 @@ Route::get('/', function () {
 
 Route::get('/', [ProductController::class, 'list'])->name('product.list');
 
+Route::post('/', [ProductController::class, 'store'])->name('product.add');
+
 
 Route::get('/login', function () {
     return view('login');
