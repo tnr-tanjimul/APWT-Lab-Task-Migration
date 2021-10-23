@@ -35,7 +35,7 @@
                 <p class="text-muted mb-4">Enter your email address and password to access account.</p>
 
 
-                <div class="invalid-feedback">Please provide a valid city.</div>
+                
                 <!-- form -->
                 <form action="{{ route('login') }}" method="post">
                     @csrf
