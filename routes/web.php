@@ -16,9 +16,13 @@ use App\Http\Controllers\RegistrationController;
 |
 */
 
+/*
 Route::get('/', function () {
-    return view('pages.home');
+    return view('pages.products');
 })->name('home');
+*/
+
+Route::get('/', [ProductController::class, 'list'])->name('product.list');
 
 
 Route::get('/login', function () {
@@ -43,6 +47,6 @@ Route::get('/contact-us', function () {
 
 
 
-Route::get('/product/list', [ProductController::class, 'list'])->name('student.list');
-Route::get('/product/list', [ProductController::class, 'list'])->name('student.list');
+
+
 Route::get('/product/delete/{id}', [ProductController::class, 'delete']);
