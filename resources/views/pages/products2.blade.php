@@ -96,7 +96,7 @@
                                     </td>
                                     <td class="table-user">
 
-                                        <a href="/" target="watchdog" class="text-body font-weight-semibold">{{$product->p_name}}</a>
+                                        <a href="/view/{{$product->id}}" target="watchdog" class="text-body font-weight-semibold">{{$product->p_name}}</a>
                                     </td>
                                     <td>{{$product->p_code}}</td>
                                     <td>{{$product->p_desc}}</td>
@@ -107,7 +107,7 @@
                                     <td>{{$product->p_rating}}</td>
 
                                     <td>
-                                        <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                        <a href="/edit/{{$product->id}}" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
                                         <a href="/delete/{{$product->id}}" class="action-icon"> <i class="mdi mdi-delete"></i></a>
                                     </td>
                                 </tr>
