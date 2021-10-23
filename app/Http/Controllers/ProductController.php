@@ -26,7 +26,7 @@ class ProductController extends Controller
             'products' =>  Product::all(),               
         ];
 
-        return view('pages.products')->with($data);
+        return view('pages.products2')->with($data);
     }
 
     public function delete(Request $request){
